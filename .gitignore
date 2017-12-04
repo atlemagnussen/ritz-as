@@ -1,4 +1,5 @@
 config/
+app/lib/
 # Logs
 logs
 *.log
