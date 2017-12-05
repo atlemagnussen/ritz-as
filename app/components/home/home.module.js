@@ -1,5 +1,1 @@
-(function(angular) {
-
-    angular.module('homeModule', ['ngRoute']);
-
-})(window.angular);
+angular.module('homeModule', ['ngRoute']);

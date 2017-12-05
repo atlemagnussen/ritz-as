@@ -1,4 +1,4 @@
 (function(angular) {
     'use strict';
-    angular.module('app', ['ngRoute', 'homeModule', 'minersModule']);
+    angular.module('app', ['ngRoute', 'homeModule']);
 })(window.angular);
