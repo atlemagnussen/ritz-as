@@ -15,10 +15,25 @@ body {
 .content {
     background: black;
     height: 100%;
-    width: 100%;
+    width: 90%;
     overflow: hidden;
+    margin-left: 200px;
+    margin-right: 0;
+    padding: 0;
 }
 
+div.menu {
+    position: fixed;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: #f4f6f9;
+    width: 10%;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.75);
+    margin: 0;
+    padding: 0;
+}
 
 /******** scrollbar *********/
 ::-webkit-scrollbar {
@@ -31,4 +46,14 @@ body {
 ::-webkit-scrollbar-thumb:window-inactive,
 ::-webkit-scrollbar-thumb {
         background:  white
+}
+
+.bold {
+    display: inline-block;
+    font-weight: bold;
+    margin-bottom: 7px;
+}
+.days {
+    display: inline-block;
+    width: 60px;
 }
