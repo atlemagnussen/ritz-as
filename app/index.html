@@ -15,17 +15,18 @@
     <script src="app.config.js"></script>
     <script src="components/home/home.module.js"></script>
     <script src="components/home/home.component.js"></script>
+    <script src="components/about/about.module.js"></script>
+    <script src="components/about/about.component.js"></script>
+    <script src="https://aframe.io/releases/0.7.0/aframe.min.js"></script>
 </head>
 
 <body>
     <div class="content">
         <div class="menu">
-            <ul class="menu-list">
-                <!-- <li><a href="#!/home">home</a></li> -->
-            </ul>
-            <p><br /></p>
+            <p><a href="#!/home"><img src="assets/logo_mini.png" width="80" height="80" /></a></p>
+            <p>Fosnavåg Brygge</p>
             <p>
-                <span class="bold">Åpningstider</span><br />
+                <!-- <span class="bold">Åpningstider</span><br /> -->
                 <span class="days">Mandag:</span> stengt<br />
                 <span class="days">Tirsdag:</span> 10.00-16.30<br />
                 <span class="days">Onsdag:</span> 10.00-16.30<br />
@@ -33,12 +34,10 @@
                 <span class="days">Fredag:</span> 10.00-16.30<br />
                 <span class="days">Lørdag:</span> 10.00-14.00<br />
             </p>
-            <p>
-                Fosnavåg Brygge
-            </p>
+            <p>908 06 036</p>
+            <p><a href="mailto:jorn.magnussen@gmail.com">e-post</a></p>
         </div>
-        <img src="assets/logo_medium.png" alt="Salong Ritz logo">
-        <div ng-view></div>
+        <div ng-view class="view"></div>
     </div>
 </body>
 
