@@ -5,7 +5,8 @@ html {
 }
 body {
     font-family: Arial, 'Lucida Sans Unicode';
-    background-color: black;
+    /* background: linear-gradient(#000, #061106); */
+    background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ), url('assets/wooden_background.jpg');
     color: white;
     height: 100%;
     width: 100%;
@@ -23,7 +24,7 @@ a {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    background: black;
+    background: transparent;
     height: 100%;
     width: 100%;
     overflow: auto;
@@ -31,15 +32,11 @@ a {
     padding: 0;
 }
 div.menu {
-    /* position: fixed;
-    top: 0;
-    left: 0; */
     font-size: 100%;
-    background: #f4f6f9;
     width: 10%;
     height: 100%;
     padding: 10px;
-    background: rgba(0, 0, 0, 0.75);
+    background: rgba(0, 0, 0, 0.2);
     margin: 0;
     padding: 0;
     order: 0
