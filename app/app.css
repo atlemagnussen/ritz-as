@@ -6,7 +6,8 @@ html {
 body {
     font-family: Arial, 'Lucida Sans Unicode';
     /* background: linear-gradient(#000, #061106); */
-    background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ), url('assets/wooden_background.jpg');
+    background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5) ), url('assets/background_products_1.png') no-repeat center center fixed;
+    background-size: cover;
     color: white;
     height: 100%;
     width: 100%;
@@ -39,14 +40,14 @@ div.menu {
     background: rgba(0, 0, 0, 0.2);
     margin: 0;
     padding: 0;
-    order: 0
+    order: 1
 }
 div.view {
     width: 90%;
     height: 100%;
     margin: 0;
     padding: 0;
-    order: 1
+    order: 0
 }
 
 
@@ -76,7 +77,6 @@ div.view {
         font-size: 1em;
     }
     div.view {
-        height: auto;
         width: 100%;
         overflow: hidden;
     }
