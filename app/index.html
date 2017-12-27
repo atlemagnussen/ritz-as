@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en" ng-app="app">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel='shortcut icon' type='image/x-icon' href='favicon.ico' />
     <title>Salong Ritz</title>
     <link rel="stylesheet" href="app.css">
+    <link rel="stylesheet" href="nav.css">
     <link rel="stylesheet" href="components/home/home.css">
     <link rel="stylesheet" href="components/about/about.css">
 
@@ -22,10 +22,21 @@
 </head>
 
 <body>
-    <div class="content">
+    <header>
+        <nav>
+            <figure id="logo">
+                <a href="#!/home"><img src="assets/logo_mini_trans.png" width="80" height="80" /></a>
+            </figure>
+            <ul id="menu-items">
+				<li><a href="#" class="current">Home</a></li>
+				<li><a href="#">About</a></li>
+				<li><a href="#">Contact</a></li>
+			</ul>
+        </nav>
+    </header>
+    <section class="content">
         <div ng-view class="view"></div>
-        <div class="menu">
-            <p><a href="#!/home"><img src="assets/logo_mini_trans.png" width="80" height="80" /></a></p>
+        <aside class="pegged-info">
             <p>Fosnavåg Brygge</p>
             <p>
                 <!-- <span class="bold">Åpningstider</span><br /> -->
@@ -38,8 +49,8 @@
             </p>
             <p>908 06 036</p>
             <p><a href="mailto:jorn.magnussen@gmail.com">e-post</a></p>
-        </div>
-    </div>
+        </aside>
+    </section>
 </body>
 
 </html>
