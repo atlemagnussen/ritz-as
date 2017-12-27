@@ -1,27 +1,30 @@
-html {
-    background-color: yellow;
-    height: 100%;
-    width: 100%;
-}
 body {
-    font-family: Arial, 'Lucida Sans Unicode';
+    font-family: 'Dangrek';
     /* background: linear-gradient(#000, #061106); */
     background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8) ), url('assets/inside_shop.png') no-repeat center center fixed;
     background-size: cover;
     color: white;
-    height: 100%;
-    width: 100%;
     margin: 0;
     padding: 0;
+    display: flex;
+    overflow: hidden;
+    flex-direction: column;
 }
-p {
-    text-align: center;
+header {
+    background: transparent;
+    width: 100%;
+    order: 0;
 }
-a {
-    color: white;
-    text-decoration: none;
+section.content {
+    background: transparent;
+    /* margin: 80px auto 40px;
+	max-width: 980px; */
+    overflow: auto;
+    overflow: visible;
+    height: auto;
+    order: 1;
 }
-.content {
+/* .content {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -31,23 +34,10 @@ a {
     overflow: auto;
     margin: 0;
     padding: 0;
-}
-aside.pegged-info {
-    font-size: 100%;
-    width: 10%;
-    height: 100%;
-    padding: 10px;
-    background: rgba(0, 0, 0, 0.2);
-    margin: 0;
-    padding: 0;
-    order: 1
-}
+} */
+
 div.view {
-    width: 90%;
     height: 100%;
-    margin: 0;
-    padding: 0;
-    order: 0
 }
 
 
@@ -70,24 +60,8 @@ div.view {
     .content {
         overflow: auto;
     }
-    div.menu {
-        width: 100%;
-        height: auto;
-        overflow: hidden;
-        font-size: 1em;
-    }
     div.view {
         width: 100%;
         overflow: hidden;
     }
-}
-
-.bold {
-    display: inline-block;
-    font-weight: bold;
-    margin-bottom: 7px;
-}
-.days {
-    display: inline-block;
-    width: 60px;
 }
