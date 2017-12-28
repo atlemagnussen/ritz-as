@@ -73,6 +73,7 @@
     "yui"           : false,
 
     "globals"       : {
-        "angular": true
+        "angular": true,
+        "FB": true
     }
 }
