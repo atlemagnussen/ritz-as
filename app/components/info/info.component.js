@@ -3,8 +3,15 @@ angular.module('infoModule').component('infoView', {
     bindings: {
         info: '='
     },
-    controller: function(facebookService) {
-        var what = facebookService.getMyLastName();
+    controller: function() {
+        this.getLastName = function() {
+                // console.log(login);
+                // facebookService.getMyLastName()
+                // .then(function(lastName) {
+                //     this.hello = lastName.last_name;
+                // });
+        };
+
         this.hello = "helllo";
     }
 });

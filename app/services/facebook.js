@@ -1,6 +1,9 @@
 angular.module('servicesModule', [])
-.factory('facebookService', function($q, $window) {
+.factory('facebookService', function($q) {
     return {
+        handleLogin: function(login) {
+            console.log(login);
+        },
         getMyLastName: function() {
             var deferred = $q.defer();
             FB.api('/me', {
