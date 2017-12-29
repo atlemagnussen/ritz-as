@@ -1,5 +1,5 @@
-angular.module('services', [])
-.factory('facebookService', function($q) {
+angular.module('servicesModule', [])
+.factory('facebookService', function($q, $window) {
     return {
         getMyLastName: function() {
             var deferred = $q.defer();
