@@ -11,6 +11,9 @@
         when('/about', {
             template: '<about-view></about-view>'
         }).
+        when('/news', {
+            template: '<news-view></news-view>'
+        }).
         otherwise('/home');
         }
     ]);

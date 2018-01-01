@@ -1,0 +1,9 @@
+<div class="news">
+    <p>{{$ctrl.hello}}</p>
+    <p>
+        <fb:login-button id="fbBtn" scope="public_profile" onlogin="checkLoginState();">
+        </fb:login-button>
+        <div id="loggedin"></div>
+        <button ng-click="$ctrl.getLastName()">Get</button>
+    </p>
+</div>
