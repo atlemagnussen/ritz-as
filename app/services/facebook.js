@@ -1,25 +1,42 @@
 angular.module('servicesModule', [])
     .factory('facebookService', function($q) {
         this.loggedin = false;
-        this.events = [];
+
+        var eventListeners = {
+            connect: []
+        };
+
+
+        this.listEvents = {};
+
+        this.clearEvent = (evtName) => {
+            if (eventListeners[evtName]) {
+                eventListeners[evtName].length = 0;
+            }
+        };
+
         return {
-            on: (e, fn) => {
-                if (e && fn) {
-                    this.events.push(fn);
+            on: (evtName, func) => {
+                if (eventListeners[evtName]) {
+                    eventListeners[evtName].push(func);
                 }
             },
-            un: function(e, fn) {
-                if (e, fn) {
-                    this.events = [];
+            un: (evtName, func) => {
+                if (eventListeners[evtName]) {
+                    var index = eventListeners[evtName].indexOf(func);
+                    if (index > -1) {
+                        eventListeners[evtName].splice(index, 1);
+                    }
                 }
             },
             handleLogin: (login) => {
                 console.log(login);
                 if (login.status === 'connected') {
                     this.loggedin = true;
-                    for(var i=0; i<this.events.length; i++) {
-                        var fn = this.events[i];
-                        fn();
+                    if (eventListeners.connect && eventListeners.connect.length > 0) {
+                        eventListeners.connect.forEach((func) => {
+                            func();
+                        });
                     }
                 }
             },
@@ -55,13 +72,18 @@ angular.module('servicesModule', [])
                 if (!this.loggedin) {
                     deferred.reject('Not logged in');
                 }
-                FB.api("/" + pageid + "/feed", function(response) {
-                    if (!response || response.error) {
-                        deferred.reject('Error occured');
-                    } else {
-                        deferred.resolve(response);
-                    }
-                });
+                try {
+                    FB.api("/" + pageid + "/feed", function(response) {
+                        if (!response || response.error) {
+                            deferred.reject('Error occured');
+                        } else {
+                            deferred.resolve(response);
+                        }
+                    });
+                } catch (e) {
+                    deferred.reject(e);
+                }
+
                 return deferred.promise;
             }
         };

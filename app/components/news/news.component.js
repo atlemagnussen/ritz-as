@@ -13,12 +13,15 @@ angular.module('newsModule').component('newsView', {
         };
 
         this.getFeed = () => {
-            console.log("get last name");
+            console.log("try get feeds");
             facebookService.getPosts("ritzherrefrisor")
                 .then(data => {
                     this.posts = data.data;
+                }, error => {
+                    console.log(error);
                 });
         };
         facebookService.on('connect', this.getFeed);
+        this.getFeed();
     }]
 });
