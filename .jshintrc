@@ -74,6 +74,7 @@
 
     "globals"       : {
         "angular": true,
-        "FB": true
+        "FB": true,
+        "moment": true
     }
 }

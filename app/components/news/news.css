@@ -1,3 +1,14 @@
 div.posts > p {
     text-align: left;
 }
+p.post {
+    margin-top: 30px;
+    padding: 5px;
+    border: 1px dotted white;
+}
+p.post span.time{
+    font-weight: bold;
+    font-size: 1.1em;
+    margin-right: 15px;
+    font-style: italic;
+}
