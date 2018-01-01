@@ -3,7 +3,7 @@ angular.module('newsModule').component('newsView', {
     controller: ['facebookService', function(facebookService) {
         this.hello = "hello from news controller";
         this.posts = [];
-
+        this.loggedin = false;
         this.getLastName = () => {
             console.log("get last name");
             facebookService.getMyLastName()
@@ -21,6 +21,12 @@ angular.module('newsModule').component('newsView', {
                     console.log(error);
                 });
         };
+        facebookService.on('connect', () => {
+            this.loggedin = true;
+        });
+        facebookService.on('disconnect', () => {
+            this.loggedin = false;
+        });
         facebookService.on('connect', this.getFeed);
         this.getFeed();
     }]

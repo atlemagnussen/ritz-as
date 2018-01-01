@@ -7,7 +7,8 @@ module.exports = function(grunt) {
             angular: {
                 files: [
                     {expand: true, flatten: true, src: ['node_modules/angular/angular.min.*'], dest: 'app/lib/', filter: 'isFile'},
-                    {expand: true, flatten: true, src: ['node_modules/angular-route/angular-route.min.*'], dest: 'app/lib/', filter: 'isFile'}
+                    {expand: true, flatten: true, src: ['node_modules/angular-route/angular-route.min.*'], dest: 'app/lib/', filter: 'isFile'},
+                    {expand: true, flatten: true, src: ['node_modules/moment/min/moment.min.js'], dest: 'app/lib/', filter: 'isFile'}
                 ]
             }
         }
