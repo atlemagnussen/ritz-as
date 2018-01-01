@@ -1,52 +1,68 @@
 angular.module('servicesModule', [])
-.factory('facebookService', function($q) {
-    this.loggedin = false;
-    return {
-        handleLogin: function(login) {
-            console.log(login);
-            if (login.status === 'connected') {
-                this.loggedin = true;
-            }
-        },
-        getMyLastName: function() {
-            var deferred = $q.defer();
-            if (!this.loggedin) {
-                deferred.reject('Not logged in');
-            }
-            FB.api('/me', {
-                fields: 'last_name'
-            }, function(response) {
-                if (!response || response.error) {
-                    deferred.reject('Error occured');
-                } else {
-                    deferred.resolve(response);
+    .factory('facebookService', function($q) {
+        this.loggedin = false;
+        this.events = [];
+        return {
+            on: (e, fn) => {
+                if (e && fn) {
+                    this.events.push(fn);
                 }
-            });
-            return deferred.promise;
-        },
-        checkLoginState: function() {
-            var deferred = $q.defer();
-            FB.getLoginStatus(function(response) {
-                if (!response || response.error) {
-                    deferred.reject('Error occured');
-                } else {
-                    deferred.resolve(response);
+            },
+            un: function(e, fn) {
+                if (e, fn) {
+                    this.events = [];
                 }
-            });
-        },
-        getPosts: function(pageid, callback) {
-        FB.api("/" + pageid + "/feed", function(response) {
-            if (!this.loggedin) {
-                if (callback) {
-                    callback({error: "not logged in"});
+            },
+            handleLogin: (login) => {
+                console.log(login);
+                if (login.status === 'connected') {
+                    this.loggedin = true;
+                    for(var i=0; i<this.events.length; i++) {
+                        var fn = this.events[i];
+                        fn();
+                    }
                 }
+            },
+            getMyLastName: () => {
+                var deferred = $q.defer();
+                if (!this.loggedin) {
+                    deferred.reject('Not logged in');
+                }
+                FB.api('/me', {
+                    fields: 'last_name'
+                }, function(response) {
+                    if (!response || response.error) {
+                        deferred.reject('Error occured');
+                    } else {
+                        deferred.resolve(response);
+                    }
+                });
+                return deferred.promise;
+            },
+            checkLoginState: () => {
+                var deferred = $q.defer();
+                FB.getLoginStatus(function(response) {
+                    if (!response || response.error) {
+                        deferred.reject('Error occured');
+                    } else {
+                        deferred.resolve(response);
+                    }
+                });
+                return deferred.promise;
+            },
+            getPosts: (pageid) => {
+                var deferred = $q.defer();
+                if (!this.loggedin) {
+                    deferred.reject('Not logged in');
+                }
+                FB.api("/" + pageid + "/feed", function(response) {
+                    if (!response || response.error) {
+                        deferred.reject('Error occured');
+                    } else {
+                        deferred.resolve(response);
+                    }
+                });
+                return deferred.promise;
             }
-            if (response && response.data && !response.error) {
-                if (callback) {
-                    callback(response);
-                }
-            }
-        });
-    }
-    };
-});
+        };
+    });

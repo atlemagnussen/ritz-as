@@ -4,6 +4,7 @@
         <fb:login-button id="fbBtn" scope="public_profile" onlogin="checkLoginState();">
         </fb:login-button>
         <div id="loggedin"></div>
-        <button ng-click="$ctrl.getLastName()">Get</button>
+        <!-- <button ng-click="$ctrl.getFeed()">Get</button> -->
+        <p ng-repeat="post in $ctrl.posts">{{post.created_time}} - {{post.message}}</p>
     </p>
 </div>
