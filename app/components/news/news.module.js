@@ -1,1 +1,1 @@
-angular.module('newsModule', ['ngRoute', 'servicesModule']);
+angular.module('newsModule', ['ngRoute', 'servicesModule', 'filtersModule']);

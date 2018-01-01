@@ -1,7 +1,7 @@
 <div class="news">
     <h2>Nyheter</h2>
     <div class="posts">
-        <p ng-repeat="post in $ctrl.posts">{{post.created_time}} - {{post.message}}</p>
+        <p ng-repeat="post in $ctrl.posts">{{post.created_time | dateView}} - {{post.message}}</p>
     </div>
     <div ng-hide="$ctrl.loggedin">
         <fb:login-button id="fbBtn" scope="public_profile" onlogin="checkLoginState();">
