@@ -14,7 +14,7 @@ angular.module('newsModule').component('newsView', {
 
         this.getFeed = () => {
             console.log("try get feeds");
-            facebookService.getPosts("ritzherrefrisor")
+            facebookService.getPosts("ritzherrefrisor", true)
                 .then(data => {
                     this.posts = data.data;
                 }, error => {
