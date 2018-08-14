@@ -14,7 +14,12 @@
     <link rel="stylesheet" href="components/info/info.css">
     <link rel="stylesheet" href="components/nav/nav.css">
     <link href='https://fonts.googleapis.com/css?family=Dangrek' rel='stylesheet'>
-
+    <script type="text/javascript">
+        function initMap() {
+            console.log("google maps api initialized");
+        }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAAd9yh8z4Sk_DAZM-I7-_HM7i-8jx1B_M&callback=initMap"></script>
     <script src="lib/angular.min.js"></script>
     <script src="lib/angular-route.min.js"></script>
     <script src="lib/moment.min.js"></script>
@@ -33,6 +38,7 @@
     <script src="components/nav/nav.component.js"></script>
     <script src="services/services.module.js"></script>
     <script src="services/facebook.js"></script>
+    <script src="services/google.js"></script>
     <script src="filters/filters.module.js"></script>
     <script src="filters/date.filter.js"></script>
     <script src="https://aframe.io/releases/0.7.0/aframe.min.js"></script>
@@ -48,7 +54,7 @@
 
             </div>
             <aside class="right">
-                <info-view>
+
             </aside>
         </section>
     </div>

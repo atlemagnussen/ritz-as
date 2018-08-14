@@ -1,4 +1,4 @@
-angular.module('servicesModule', [])
+angular.module('servicesModule')
     .factory('facebookService', function($q) {
         this.loggedin = false;
 
