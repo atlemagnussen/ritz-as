@@ -1,6 +1,6 @@
 (function(angular) {
     'use strict';
-    angular.module('app', ['ngRoute', 'homeModule', 'aboutModule', 'newsModule', 'infoModule', 'navModule', 'servicesModule', 'filtersModule'])
+    angular.module('app', ['ngRoute', 'homeModule', 'aboutModule', 'newsModule', 'infoModule', 'navModule', 'servicesModule', 'filtersModule', 'orderModule'])
         .controller('MainCtrl', function mainCtrl($scope, facebookService) {
             $scope.$on('fb-login', function(e, login) {
                 facebookService.handleLogin(login);

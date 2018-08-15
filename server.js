@@ -1,23 +1,23 @@
 const path = require('path');
 const express = require('express');
 const http = require('http');
+const dirname = process.cwd();
 
-// static server
+console.log(`dirname=${dirname}`);
+
+var port = process.argv[2] || 3000;
+var webFolder = path.join(dirname, 'app');
+var indexPath = path.join(webFolder, 'index.html');
+
 const app = express();
-var router = express.Router();
-app.use(express.static(path.join(__dirname, 'app')));
+app.use(express.static(webFolder));
+app.get('*', (req, res) => {
+    console.log(`default for ${req.url}, sent to ${indexPath}`);
+    res.sendFile(indexPath);
+});
+
 const server = http.createServer(app);
 
-// api
-router.get('/', function (req, res) {
-    res.json({ message: 'This is the api' });
-});
-
-router.get('/config', function (req, res) {
-    res.json("hey");
-});
-
-app.use('/api', router);
-server.listen(8888, function listening() {
+server.listen(port, function listening() {
     console.log('Listening on %d', server.address().port);
 });

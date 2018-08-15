@@ -47,6 +47,11 @@ section {
     width: 40%;
 }
 
+iframe {
+    height: 90%;
+    width: 100%;
+}
+
 /******** scrollbar *********/
 ::-webkit-scrollbar {
     background-color: transparent;
