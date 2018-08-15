@@ -36,7 +36,7 @@ angular.module('servicesModule')
                 featureType: 'poi.park',
                 elementType: 'geometry',
                 stylers: [{
-                    color: '#263c3f'
+                    color: 'green'
                 }]
             },
             {
