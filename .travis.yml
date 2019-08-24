@@ -1,0 +1,17 @@
+language: node_js
+node_js:
+  - "10.14.1"
+branches:
+  only:
+    - master
+before_script:
+  - npm install -g @angular/cli
+script:
+  - npm install
+  - npm run build
+deploy:
+  provider: firebase
+  skip_cleanup: true
+  token:
+    secure: "FIq0jXgeNo9sAX47y/HXQ288HZ7/n2/u+kTIcESZivFCZ8kqzgMd8yt0Vpumyxd2Xoky9pFrDULS/h1wCvp5svhRSFoLqD/3cRENtJEfH0G90LBwmqMhbSZGEEC+kWkAIlxCIf0qQ9VG+gbdSXZaW8HZU33f28Rl9bZfHtslu4ozmOprOgokajMPDAWETM7tvqcv23hd6tgCccqiPLm2s9oMyboG8bvgblMvMH2WjvRdFGeGgk78nbwrBjgZa2z9FOU/CmPfrN5hbDpHRKHuRpDnWGyPo9zX7VkfSbb9bilTy2FV7XrnQb8MTvnqNHzETplN4g44kTJTf/ABnWP6mHuwxK3qDX2HBkb6HibPQh8S5QbzcVGaPD9Pt29BbkHsUWeqbKI6j0S+UHKlQjAFFB6fYf3OsqAofv0PaZ9cGwqen5tWn1vgaawRjkALcy3ncCiBE/BdifrC8ilz+9pvhQ4eXBPvOSSnY9D19wSWa918kwS8gDx4dtwaSmt5TzoGEVsqeJoH1wsw/jYVuPL0o7RbinK6YnGsYqhUOko0AgtN0kjO2/OEmTolV9AVh6XVROyyySTf99FTn7TOnfLXpxVHaH3BfLbVkHBea0/A+llHqrXnx3XB1WEDW3AcHwhrOa3UcNgrYTxjAwCZCka9eLeTHj4l4qok6mUbLE/Vku8="
+  message: "ritz.as travis github build"
