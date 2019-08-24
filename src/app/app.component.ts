@@ -14,9 +14,10 @@ export class AppComponent {
     constructor() {
         this.title = "hello";
     }
+
     ngOnInit(): void {
         const mapProperties = {
-            center: new google.maps.LatLng(35.2271, -80.8431),
+            center: new google.maps.LatLng(62.342218, 5.633821),
             zoom: 15,
             mapTypeId: google.maps.MapTypeId.ROADMAP,
         };
