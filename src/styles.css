@@ -1,5 +1,25 @@
 body {
-    background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8) ), url('assets/inside_shop.png') no-repeat center center fixed;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)),
+        url("assets/inside_shop.png") no-repeat center center fixed;
     background-size: cover;
+    color: white;
 }
 
+/******** scrollbar *********/
+::-webkit-scrollbar {
+    background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb:window-inactive,
+::-webkit-scrollbar-thumb {
+    background: white;
+}
+
+@media only screen and (max-width: 640px) {
+    section {
+        flex-direction: column;
+    }
+    .logo {
+        width: 60%;
+    }
+}
