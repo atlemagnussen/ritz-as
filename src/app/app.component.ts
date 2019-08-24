@@ -1,5 +1,5 @@
 import { Component } from "@angular/core";
-import { GoogleService } from "./google.service";
+import { GoogleService, GmapsStyle } from "./google.service";
 
 @Component({
     selector: "app-root",
@@ -7,8 +7,10 @@ import { GoogleService } from "./google.service";
     styleUrls: ["./app.component.css"]
 })
 export class AppComponent {
+    style: GmapsStyle[];
     title: string;
     constructor(private googleService: GoogleService) {
-        this.title = this.googleService.getHello();
+        this.style = this.googleService.getStyle();
+        this.title = JSON.stringify(this.style);
     }
 }
