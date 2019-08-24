@@ -1,4 +1,5 @@
 import { Component } from "@angular/core";
+import { GoogleService } from "./google.service";
 
 @Component({
     selector: "app-root",
@@ -6,6 +7,8 @@ import { Component } from "@angular/core";
     styleUrls: ["./app.component.css"]
 })
 export class AppComponent {
-
-    title = "ritz";
+    title: string;
+    constructor(private googleService: GoogleService) {
+        this.title = this.googleService.getHello();
+    }
 }

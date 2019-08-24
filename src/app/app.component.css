@@ -1,3 +1,12 @@
 .logo {
-    width: 90%;
+    width: 70%;
+}
+.home {
+    text-align: center;
+}
+
+@media only screen and (max-width: 640px) {
+    app-root {
+        width: 99vw;
+    }
 }
