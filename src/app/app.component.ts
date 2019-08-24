@@ -1,7 +1,6 @@
-import { Component } from "@angular/core";
-import { ViewChild } from "@angular/core";
+import { Component, ViewChild, ElementRef } from "@angular/core";
 import {} from "googlemaps";
-import { GoogleService } from './google.service';
+import { GoogleService } from "./google.service";
 
 @Component({
     selector: "app-root",
@@ -10,16 +9,20 @@ import { GoogleService } from './google.service';
 })
 export class AppComponent {
 
-    @ViewChild("map", { static: true }) mapElement: any;
+    @ViewChild("map", { static: true }) mapElement: ElementRef;
     map: google.maps.Map;
+    pointer: google.maps.Marker;
     title: string;
     constructor(private googleService: GoogleService) {
         this.title = "hello";
     }
 
     ngOnInit(): void {
+
+        const pos = new google.maps.LatLng(62.342218, 5.633821);
+
         const mapProperties = {
-            center: new google.maps.LatLng(62.342218, 5.633821),
+            center: pos,
             zoom: 15,
             mapTypeId: google.maps.MapTypeId.ROADMAP,
             mapTypeControl: false,
@@ -33,5 +36,9 @@ export class AppComponent {
             this.mapElement.nativeElement,
             mapProperties
         );
+        this.pointer = new google.maps.Marker({
+            position: pos,
+            map: this.map,
+        });
     }
 }
