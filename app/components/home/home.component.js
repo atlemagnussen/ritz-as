@@ -1,6 +1,6 @@
-angular.module('homeModule').component('homeView', {
-    templateUrl: 'components/home/home.html',
-    controller: ['googleService', function(googleService) {
+angular.module("homeModule").component("homeView", { 
+    templateUrl: "components/home/home.html",
+    controller: ["googleService", function(googleService) {
         this.hello = "hello from home controller";
 
 
@@ -10,7 +10,7 @@ angular.module('homeModule').component('homeView', {
         };
 
         this.map = new google.maps.Map(
-            document.getElementById('map'), {
+            document.getElementById("map"), {
                 zoom: 15,
                 center: loc,
                 styles: googleService.styleDark,
@@ -20,7 +20,7 @@ angular.module('homeModule').component('homeView', {
                 streetViewControl: false,
                 rotateControl: false,
                 fullscreenControl: true,
-                mapTypeId: 'terrain'
+                mapTypeId: "terrain"
             });
 
         this.marker = new google.maps.Marker({

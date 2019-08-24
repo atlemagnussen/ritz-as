@@ -1,5 +1,5 @@
-angular.module('servicesModule')
-    .factory('facebookService', function($q) {
+angular.module("servicesModule")
+    .factory("facebookService", function($q) {
         this.loggedin = false;
 
         var eventListeners = {
@@ -31,7 +31,7 @@ angular.module('servicesModule')
             },
             handleLogin: (login) => {
                 console.log(login);
-                if (login.status === 'connected') {
+                if (login.status === "connected") {
                     this.loggedin = true;
                     if (eventListeners.connect && eventListeners.connect.length > 0) {
                         eventListeners.connect.forEach((func) => {
@@ -43,13 +43,13 @@ angular.module('servicesModule')
             getMyLastName: () => {
                 var deferred = $q.defer();
                 if (!this.loggedin) {
-                    deferred.reject('Not logged in');
+                    deferred.reject("Not logged in");
                 }
-                FB.api('/me', {
-                    fields: 'last_name'
+                FB.api("/me", {
+                    fields: "last_name"
                 }, function(response) {
                     if (!response || response.error) {
-                        deferred.reject('Error occured');
+                        deferred.reject("Error occured");
                     } else {
                         deferred.resolve(response);
                     }
@@ -60,7 +60,7 @@ angular.module('servicesModule')
                 var deferred = $q.defer();
                 FB.getLoginStatus(function(response) {
                     if (!response || response.error) {
-                        deferred.reject('Error occured');
+                        deferred.reject("Error occured");
                     } else {
                         deferred.resolve(response);
                     }
@@ -127,7 +127,7 @@ angular.module('servicesModule')
                             "id": "252325751858559_299084647182669"
                         }, {
                             "created_time": "2017-05-09T09:51:19+0000",
-                            "story": "RITZ Herrefris\u00f8r shared The Great British Barber Bash's photo.",
+                            "story": "RITZ Herrefris\u00f8r shared The Great British Barber Bash photo.",
                             "id": "252325751858559_288287804929020"
                         }, {
                             "created_time": "2017-03-31T10:25:04+0000",
@@ -151,7 +151,7 @@ angular.module('servicesModule')
                             "id": "252325751858559_261547487603052"
                         }, {
                             "created_time": "2017-02-17T11:25:53+0000",
-                            "message": "Hei folkens!\nDa er jeg kommet godt i gang med klippingen og godt \u00e5 se at mange av dere gode '  gamle' kunder har funnet fram \ud83d\ude0a H\u00e5per at flere vil stikke hode innom for en klipp eller en god prat.\nStikk en tur innom da folkens \ud83d\ude0a",
+                            "message": "Hei folkens!\nDa er jeg kommet godt i gang med klippingen og godt \u00e5 se at mange av dere gode \"  gamle\" kunder har funnet fram \ud83d\ude0a H\u00e5per at flere vil stikke hode innom for en klipp eller en god prat.\nStikk en tur innom da folkens \ud83d\ude0a",
                             "id": "252325751858559_256546648103136"
                         }, {
                             "created_time": "2017-02-06T20:47:59+0000",
@@ -169,12 +169,12 @@ angular.module('servicesModule')
                 }
 
                 if (!this.loggedin) {
-                    deferred.reject('Not logged in');
+                    deferred.reject("Not logged in");
                 }
                 try {
                     FB.api("/" + pageid + "/feed", function(response) {
                         if (!response || response.error) {
-                            deferred.reject('Error occured');
+                            deferred.reject("Error occured");
                         } else {
                             deferred.resolve(response);
                         }

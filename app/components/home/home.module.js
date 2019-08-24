@@ -1,1 +1,1 @@
-angular.module('homeModule', ['ngRoute']);
+angular.module("homeModule", ["ngRoute"]);

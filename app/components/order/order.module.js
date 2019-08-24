@@ -1,1 +1,1 @@
-angular.module('orderModule', ['ngRoute']);
+angular.module("orderModule", ["ngRoute"]);

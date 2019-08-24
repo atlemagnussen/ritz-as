@@ -1,1 +1,1 @@
-angular.module('infoModule', ['ngRoute']);
+angular.module("infoModule", ["ngRoute"]);

@@ -1,7 +1,7 @@
-angular.module('orderModule').component('orderView', {
-    templateUrl: 'components/order/order.html',
+angular.module("orderModule").component("orderView", {
+    templateUrl: "components/order/order.html",
     bindings: {
-        info: '='
+        info: "="
     },
     controller: function() {
         this.hello = "helllo";

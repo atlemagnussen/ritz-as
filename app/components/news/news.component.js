@@ -1,6 +1,6 @@
-angular.module('newsModule').component('newsView', {
-    templateUrl: 'components/news/news.html',
-    controller: ['facebookService', function(facebookService) {
+angular.module("newsModule").component("newsView", {
+    templateUrl: "components/news/news.html",
+    controller: ["facebookService", function(facebookService) {
         this.hello = "hello from news controller";
         this.posts = [];
         this.loggedin = false;
@@ -21,13 +21,13 @@ angular.module('newsModule').component('newsView', {
                     console.log(error);
                 });
         };
-        facebookService.on('connect', () => {
+        facebookService.on("connect", () => {
             this.loggedin = true;
         });
-        facebookService.on('disconnect', () => {
+        facebookService.on("disconnect", () => {
             this.loggedin = false;
         });
-        facebookService.on('connect', this.getFeed);
+        facebookService.on("connect", this.getFeed);
         this.getFeed();
     }]
 });

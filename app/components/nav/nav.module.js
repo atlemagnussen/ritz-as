@@ -1,1 +1,1 @@
-angular.module('navModule', ['ngRoute']);
+angular.module("navModule", ["ngRoute"]);
