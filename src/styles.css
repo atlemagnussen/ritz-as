@@ -3,8 +3,25 @@ body {
         url("assets/inside_shop.png") no-repeat center center fixed;
     background-size: cover;
     color: white;
+    display: flex;
+    justify-content: center;
 }
 
+app-root {
+    display: block;
+    width: 80vw;
+}
+
+a {
+    color: grey;
+    text-decoration: none;
+}
+a:visited {
+    color: grey;
+}
+a:hover {
+    color: white;
+}
 /******** scrollbar *********/
 ::-webkit-scrollbar {
     background-color: transparent;
@@ -16,10 +33,7 @@ body {
 }
 
 @media only screen and (max-width: 640px) {
-    section {
-        flex-direction: column;
-    }
-    .logo {
-        width: 60%;
+    app-root {
+        width: 99vw;
     }
 }
