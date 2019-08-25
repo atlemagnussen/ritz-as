@@ -29,7 +29,8 @@ export class AppComponent {
             caleControl: false,
             streetViewControl: false,
             rotateControl: false,
-            fullscreenControl: true,
+            fullscreenControl: false,
+            zoomControl: false,
             styles: this.googleService.getStyle(),
             backgroundColor: "hsla(0, 0%, 0%, 0)",
         };

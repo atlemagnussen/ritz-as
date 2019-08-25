@@ -27,6 +27,15 @@ export class GoogleService {
                 ],
             },
             {
+                featureType: "landscape.natural.terrain",
+                elementType: "geometry.fill",
+                stylers: [
+                    {
+                        visibility: "on"
+                    }
+                ],
+            },
+            {
                 featureType: "landscape.natural.landcover",
                 elementType: "geometry.fill",
                 stylers: [
@@ -206,7 +215,7 @@ export class GoogleService {
                     }
                 ],
             },
-        ]
+        ];
     }
 
     getStyle(): google.maps.MapTypeStyle[] {

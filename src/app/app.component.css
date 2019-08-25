@@ -10,6 +10,10 @@
     width: 100%;
 }
 
+.gmnoprint {
+    background: transparent;
+}
+
 @media only screen and (max-width: 640px) {
     app-root {
         width: 99vw;
