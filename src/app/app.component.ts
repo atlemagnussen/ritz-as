@@ -30,7 +30,8 @@ export class AppComponent {
             streetViewControl: false,
             rotateControl: false,
             fullscreenControl: true,
-            styles: this.googleService.getStyle()
+            styles: this.googleService.getStyle(),
+            backgroundColor: "hsla(0, 0%, 0%, 0)",
         };
         this.map = new google.maps.Map(
             this.mapElement.nativeElement,

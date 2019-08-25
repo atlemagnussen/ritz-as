@@ -1,11 +1,12 @@
 import { Injectable } from "@angular/core";
-import { } from "googlemaps";
+import {} from "googlemaps";
 
 @Injectable({
     providedIn: "root",
 })
 export class GoogleService {
     private styleDark: google.maps.MapTypeStyle[];
+    private styleTrans: google.maps.MapTypeStyle[];
 
     constructor() {
         this.styleDark = [
@@ -13,7 +14,33 @@ export class GoogleService {
                 elementType: "geometry",
                 stylers: [
                     {
-                        color: "#000000",
+                        color: "#eeeeee",
+                    },
+                ],
+            },
+            {
+                elementType: "geometry.fill",
+                stylers: [
+                    {
+                        visibility: "off",
+                    },
+                ],
+            },
+            {
+                featureType: "landscape.natural.landcover",
+                elementType: "geometry.fill",
+                stylers: [
+                    {
+                        visibility: "on"
+                    }
+                ],
+            },
+            {
+                featureType: "landscape.natural",
+                elementType: "geometry",
+                stylers: [
+                    {
+                        color: "#dfd2ae",
                     },
                 ],
             },
@@ -143,15 +170,6 @@ export class GoogleService {
             },
             {
                 featureType: "water",
-                elementType: "geometry",
-                stylers: [
-                    {
-                        color: "#aaaaaa",
-                    },
-                ],
-            },
-            {
-                featureType: "water",
                 elementType: "labels.text.fill",
                 stylers: [
                     {
@@ -169,6 +187,26 @@ export class GoogleService {
                 ],
             },
         ];
+
+        this.styleTrans = [
+            {
+                elementType: "geometry.fill",
+                stylers: [
+                    {
+                        visibility: "off",
+                    },
+                ],
+            },
+            {
+                featureType: "landscape.natural.landcover",
+                elementType: "geometry.fill",
+                stylers: [
+                    {
+                        visibility: "on"
+                    }
+                ],
+            },
+        ]
     }
 
     getStyle(): google.maps.MapTypeStyle[] {
