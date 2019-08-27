@@ -1,8 +1,6 @@
 <div class="home">
     <p><img class="logo" src="assets/logo_medium_trans.png" alt="logo for Ritz Herrefrisør"></p>
 
-    <google-maps [pos]="pos"></google-maps>
-    <!--62.342218, 5.633821-->
     <div class="info">
         <h2>FOSNAVÅG BRYGGE</h2>
         <h3>Tlf 908 06 036</h3>
@@ -13,11 +11,12 @@
         <h3>Fredag:&nbsp;10.00-16.30</h3>
         <h3>Lørdag:&nbsp;10.00-14.00</h3>
         <h1><a href="https://fixit.no/frisor/ritz-herrefrisor/1962">Bestill her</a></h1>
-        <p><a href="https://www.facebook.com/ritzherrefrisor">Facebook</a></p>
-        <p><a href="https://www.instagram.com/ritzherrefrisor">Instagram</a></p>
-        <app-my-counter></app-my-counter>
+        <p><a href="https://www.facebook.com/ritzherrefrisor"><facebook-logo></facebook-logo></a></p>
+        <p><a href="https://www.instagram.com/ritzherrefrisor"><instagram-logo></instagram-logo></a></p>
+        
     </div>
 
+    <google-maps [pos]="pos"></google-maps>
 </div>
 
 <router-outlet></router-outlet>
