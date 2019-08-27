@@ -3,10 +3,12 @@ import { NgModule } from "@angular/core";
 
 import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
+import { GoogleMapsComponent } from "./components/google-maps/google-maps.component";
 
 @NgModule({
     declarations: [
-        AppComponent
+        AppComponent,
+        GoogleMapsComponent
     ],
     imports: [
         BrowserModule,

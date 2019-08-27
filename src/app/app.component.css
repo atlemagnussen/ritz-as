@@ -4,11 +4,6 @@
 .home {
     text-align: center;
 }
-.map {
-    text-align: center;
-    height: 400px; /* The height is 400 pixels */
-    width: 100%;
-}
 
 .gmnoprint {
     background: transparent;
