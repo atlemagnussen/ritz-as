@@ -3,7 +3,7 @@ import {} from "googlemaps";
 import { GoogleService } from "../../services/google.service";
 
 @Component({
-    selector: "app-google-maps",
+    selector: "google-maps",
     templateUrl: "./google-maps.component.html",
     styleUrls: ["./google-maps.component.css"]
 })
