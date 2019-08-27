@@ -14,8 +14,9 @@ export class GoogleMapsComponent implements OnInit {
     pointer: google.maps.Marker;
     
     posString: string;
-    @Input() latitude: number;
-    @Input() longitude: number;
+    // @Input() latitude: number;
+    // @Input() longitude: number;
+    @Input() pos: google.maps.LatLng;
     constructor(private googleService: GoogleService) { 
 
     }
@@ -23,11 +24,11 @@ export class GoogleMapsComponent implements OnInit {
     ngOnInit(): void {
 
         // const pos = new google.maps.LatLng(62.342218, 5.633821);
-        const pos = new google.maps.LatLng(this.latitude, this.longitude);
-        this.posString = pos.toString();
+        // const pos = new google.maps.LatLng(this.latitude, this.longitude);
+        this.posString = this.pos.toString();
 
         const mapProperties = {
-            center: pos,
+            center: this.pos,
             zoom: 15,
             mapTypeId: google.maps.MapTypeId.ROADMAP,
             mapTypeControl: false,
@@ -44,7 +45,7 @@ export class GoogleMapsComponent implements OnInit {
             mapProperties
         );
         this.pointer = new google.maps.Marker({
-            position: pos,
+            position: this.pos,
             map: this.map,
         });
     }
