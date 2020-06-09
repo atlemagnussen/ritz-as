@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "public": "dist/ritz",
+    "public": "public",
     "ignore": [
       "firebase.json",
       "**/.*",

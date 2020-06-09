@@ -1,0 +1,35 @@
+html, body {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 100%;
+}
+
+body {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)),
+        url("/assets/inside_shop.png") no-repeat center center fixed;
+    background-size: cover;
+    color: white;
+    display: flex;
+    justify-content: center;
+}
+
+a {
+    color: grey;
+    text-decoration: none;
+}
+a:visited {
+    color: grey;
+}
+a:hover {
+    color: white;
+}
+/******** scrollbar *********/
+::-webkit-scrollbar {
+    background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb:window-inactive,
+::-webkit-scrollbar-thumb {
+    background: white;
+}
