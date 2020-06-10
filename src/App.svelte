@@ -4,7 +4,7 @@
     curSearchParam.set(window.location.search);
     docTitle.set(name);
     import state from "./services/pagestate.js";
-    // import Link from "./components/Link.svelte";
+    import Menu from "./components/Menu.svelte";
 
     import Container from "./Container.svelte";
     import { onMount } from "svelte";
@@ -25,26 +25,15 @@
 		text-align: center;
 	}
 
-	.gmnoprint {
-		background: transparent;
-	}
-
 	@media only screen and (max-width: 640px) {
 		
 	}
 </style>
 <svelte:window on:popstate="{handlerBackNavigation}" />
 <main>
-    <!-- <header>
-        <nav>
-            <Link page="{{ path: '/', name: 'Home' }}">
-                <div class="logo">TRQ</div>
-            </Link>
-            <Link page="{{ path: '/plans', name: 'Plans' }}" color="white" />
-            <Link page="{{ path: '/about', name: 'About' }}" color="white" />
-        </nav>
-        <Login />
-    </header> -->
+    <header>
+        <Menu />
+    </header>
     
     <Container />
     

@@ -41,4 +41,4 @@
         width: 100%;
     }
 </style>
-<div class="map" bind:this={element}></div>
+<div name="map" class="map" bind:this={element}></div>

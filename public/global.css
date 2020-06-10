@@ -6,20 +6,28 @@ html, body {
 }
 
 body {
-    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)),
-        url("/assets/inside_shop.png") no-repeat center center fixed;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)), url("/assets/inside_shop.png") no-repeat center center fixed;
     background-size: cover;
     color: white;
     display: flex;
     justify-content: center;
 }
-
+main {
+    width: 80vw;
+}
 a {
     color: grey;
     text-decoration: none;
 }
+a.link-important {
+    color: white;
+    text-decoration: underline;
+}
+a.link-important:visited {
+    color: white;
+}
 a:visited {
-    color: grey;
+    color: white;
 }
 a:hover {
     color: white;
