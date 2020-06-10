@@ -1,6 +1,7 @@
 <script>
     import FacebookLogo from "../components/FacebookLogo.svelte";
     import InstagramLogo from "../components/InstagramLogo.svelte";
+    import GoogleMaps from "../components/GoogleMaps.svelte";
 </script>
 
 <style>
@@ -26,4 +27,4 @@
     
 </div>
 
-    <!-- <google-maps [pos]="pos"></google-maps> -->
+<GoogleMaps lat={62.342218} lng={5.633821} title="Salong Ritz Herrefrisør" />
