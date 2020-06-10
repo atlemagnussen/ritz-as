@@ -24,7 +24,10 @@
 	main {
 		text-align: center;
 	}
-
+    main header {
+        position: sticky;
+        top: 0;
+    }
 	@media only screen and (max-width: 640px) {
 		
 	}

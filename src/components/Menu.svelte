@@ -26,7 +26,7 @@
         font-size: 1.5rem;
         left: -200px;
         width: 100px;
-        background: rgba(200, 200, 200, 0.2);
+        background: rgba(20, 20, 20, 0.2);
         padding: 5rem;
     }
     nav.show {
@@ -36,8 +36,13 @@
         animation: slide 0.5s forwards;
         animation-delay: 0;
     }
+    @media only screen and (max-width: 640px) {
+		nav {
+            background: rgba(20, 20, 20, 0.9);
+        }
+	}
     @keyframes slide {
-        100% { left: 100px; }
+        100% { left: 0px; }
     }
 </style>
 <div>
@@ -50,7 +55,7 @@
             <path d="M4,10h24c1.104,0,2-0.896,2-2s-0.896-2-2-2H4C2.896,6,2,6.896,2,8S2.896,10,4,10z M28,14H4c-1.104,0-2,0.896-2,2  s0.896,2,2,2h24c1.104,0,2-0.896,2-2S29.104,14,28,14z M28,22H4c-1.104,0-2,0.896-2,2s0.896,2,2,2h24c1.104,0,2-0.896,2-2  S29.104,22,28,22z"/>
         </svg>
     {/if}
-    <nav class:show={show}>
+    <nav class:show={show} on:click={toggle}>
         <Link page={{name: "Hjem", path: "/"}} />
         <a href="#go-to-map" style="color: white">Kart</a>
         <Link page={{name: "Bestill", path: "/bestill"}} />
