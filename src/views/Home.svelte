@@ -19,6 +19,9 @@
             <small>Holmsildgata 10</small>
         </h2>
     </div>
+    <!-- <h1><a href="https://fixit.no/frisor/ritz-herrefrisor/1962">Bestill her</a></h1> -->
+    <!-- <h1><a class="link-important" href="https://bestill.timma.no/reservation/ritzherrefrisor">Bestill time her</a></h1> -->
+    <h1><a class="link-important" href="https://bestill.salongritz.no/">Bestill time her</a></h1>
     <h3>Tlf 908 06 036</h3>
     <div itemprop="openingHours">
         <h3>Mandag:&nbsp;stengt</h3>
@@ -28,8 +31,7 @@
         <h3>Fredag:&nbsp;10.00-16.30</h3>
         <h3>Lørdag:&nbsp;10.00-14.00</h3>
     </div>
-    <!-- <h1><a href="https://fixit.no/frisor/ritz-herrefrisor/1962">Bestill her</a></h1> -->
-    <h1><a href="https://bestill.timma.no/reservation/ritzherrefrisor">Bestill her</a></h1>
+    
     <p><a href="https://www.facebook.com/ritzherrefrisor"><FacebookLogo /></a></p>
     <p><a href="https://www.instagram.com/ritzherrefrisor"><InstagramLogo /></a></p>
     

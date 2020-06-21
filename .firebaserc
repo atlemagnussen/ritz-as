@@ -1,5 +1,17 @@
 {
-  "projects": {
-    "default": "ritz-as"
-  }
+    "projects": {
+        "default": "ritz-as"
+    },
+    "targets": {
+        "ritz-as": {
+            "hosting": {
+                "order": [
+                    "order-ritz"
+                ],
+                "prod": [
+                    "ritz-as"
+                ]
+            }
+        }
+    }
 }
