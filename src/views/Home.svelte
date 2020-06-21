@@ -32,8 +32,8 @@
         <h3>Lørdag:&nbsp;10.00-14.00</h3>
     </div>
     
-    <p><a href="https://www.facebook.com/ritzherrefrisor"><FacebookLogo /></a></p>
-    <p><a href="https://www.instagram.com/ritzherrefrisor"><InstagramLogo /></a></p>
+    <p><a href="https://www.facebook.com/ritzherrefrisor"><FacebookLogo /></a>&nbsp&nbsp
+    <a href="https://www.instagram.com/ritzherrefrisor"><InstagramLogo /></a></p>
     
 </div>
 <div id="go-to-map">
