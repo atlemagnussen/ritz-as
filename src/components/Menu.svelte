@@ -58,6 +58,7 @@
     <nav class:show={show} on:click={toggle}>
         <Link page={{name: "Hjem", path: "/"}} />
         <a href="#go-to-map" style="color: white">Kart</a>
-        <Link page={{name: "Bestill", path: "/bestill"}} />
+        <a href="https://timma.no/h%C3%A5r/klipp/klipp/ritz-herrefrisor" style="color: white">Bestill</a>
+        <!-- <Link page={{name: "Bestill", path: "/bestill"}} /> -->
     </nav>
 </div>
