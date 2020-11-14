@@ -24,7 +24,7 @@
         zoom: 15,
         mapTypeId: google.maps.MapTypeId.ROADMAP,
         mapTypeControl: false,
-        caleControl: false,
+        scaleControl: false,
         streetViewControl: false,
         rotateControl: false,
         fullscreenControl: false,
