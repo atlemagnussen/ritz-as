@@ -10,8 +10,8 @@
     let pointer;
     onMount(() => {
         pos = { lat, lng };
-        mapProperties.center = pos;
-        map = new google.maps.Map(element, mapProperties);
+        options.center = pos;
+        map = new google.maps.Map(element, options);
         pointer = new google.maps.Marker({
             position: pos,
             map,
@@ -20,7 +20,7 @@
     });
     //let posString = pos.toString();
 
-    const mapProperties = {
+    const options = {
         zoom: 15,
         mapTypeId: google.maps.MapTypeId.ROADMAP,
         mapTypeControl: false,
@@ -29,7 +29,7 @@
         rotateControl: false,
         fullscreenControl: false,
         zoomControl: false,
-        styles: googleService.getStyle(),
+        styles: googleService.styleDark,
         backgroundColor: "hsla(0, 0%, 0%, 0)",
     };
 
