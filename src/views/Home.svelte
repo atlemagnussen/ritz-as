@@ -19,8 +19,8 @@
             <small>Holmsildgata 10</small>
         </h2>
     </div>
-    <!-- <h1><a class="link-important" href="https://bestill.timma.no/reservation/ritzherrefrisor">Bestill time her</a></h1> -->
-    <h1><a class="link-important" href="https://timma.no/h%C3%A5r/klipp/klipp/ritz-herrefrisor">Bestill time her</a></h1>
+    
+    <h1><a class="link-important" href="https://timma.no/salong/salongritz">Bestill time her</a></h1>
     <h3>Tlf 908 06 036</h3>
     <div itemprop="openingHours">
         <h3>Mandag:&nbsp;stengt</h3>
